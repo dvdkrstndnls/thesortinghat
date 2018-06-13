@@ -4,7 +4,7 @@
 // These data sources hold arrays of information on all possible friends
 // ===============================================================================
 
-var sorting = require("../data/sorting-quiz");
+var sorting = require("../views/sorting-quiz");
 
 // ===============================================================================
 // ROUTING
