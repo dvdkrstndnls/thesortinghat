@@ -20,7 +20,7 @@
 <body>
 
   <div class="container">
-
+<!-- here we show the quiz that is used to gain insight into user personality for the purpose of sorting into 'Houses' -->
     <h2>SORTING QUIZ</h2>
     <hr>
 
@@ -331,6 +331,9 @@
             $("#q10").val()
           ]
         };
+
+
+        //we will replace the remaining logic with something that connects to Sequelize DB
 
         // AJAX post the data to the friends API.
         $.post("/api/sorting-quiz", userData, function(data) {
