@@ -75,11 +75,13 @@ module.exports = function(app) {
         bestMatch.friendDifference = totalDifference;
       }
     }
-
+    // THIS PART NEEDS AN UPDATE TO PUSH TO SEQUELIZE DATABASE INSTEAD!!!!!
     // Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
     // the database will always return that the user is the user's best friend).
     sorting.push(userData);
 
+
+    // THIS PART NEEDS AN UPDATE TO RETURN DATA FROM SEQUELIZE DATABASE INSTEAD
     // Return a JSON with the user's bestMatch. This will be used by the HTML in the next page
     res.json(bestMatch);
   });

@@ -28,6 +28,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+
+//maybe we don;t use handlebars SINCE ITS NOT REQUIRED and just serve regular html instead? (see author post activity)
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -39,8 +41,9 @@ app.set("view engine", "handlebars");
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
+//DO THE 2 REQUIRE BELOW ALSO NEED VAR ASSOCIATED WITH THEM?
 require("./controllers/apiRoutes.js")(app);
-require("./controllers/htmlRoutes")(app);
+require("./controllers/htmlRoutes.js")(app);
 
 var routes = require("./controllers/burgersController.js");
 
@@ -51,6 +54,17 @@ app.use(routes);
 // The below code effectively "starts" our server
 // ==============================================================================
 
+//perhaps we delete the 3 below lines?
 app.listen(PORT, function() {
   console.log("Listening on port:%s", PORT);
 });
+
+
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
+
