@@ -57,11 +57,6 @@ app.use(routes);
 // The below code effectively "starts" our server
 // ==============================================================================
 
-//perhaps we delete the 3 below lines?
-app.listen(PORT, function() {
-  console.log("Listening on port:%s", PORT);
-});
-
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
