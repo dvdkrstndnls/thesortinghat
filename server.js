@@ -45,7 +45,7 @@ app.set("view engine", "handlebars");
 require("./controllers/apiRoutes.js")(app);
 require("./controllers/htmlRoutes.js")(app);
 
-var routes = require("./controllers/burgersController.js");
+var routes = require("./controllers/usersController.js");
 
 app.use(routes);
 
