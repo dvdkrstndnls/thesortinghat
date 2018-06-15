@@ -2,12 +2,12 @@ module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
     // Giving the Users model a name of type STRING
     name: DataTypes.STRING,
-    age: Sequelize.INTEGER, //integer   ///validation would be ideal
+    age: DataTypes.INTEGER, //integer   ///validation would be ideal
     gender: DataTypes.STRING,
     location: DataTypes.STRING,
     email: DataTypes.STRING,
     photo: DataTypes.STRING,
-    submission_date: Sequelize.DATE , ///date format validation would be idea
+    submission_date: DataTypes.DATE , ///date format validation would be idea
     team: DataTypes.STRING,
 
 
