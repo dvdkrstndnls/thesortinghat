@@ -19,6 +19,9 @@ var PORT = process.env.PORT || 8000;
 // Tells node that we are creating an "express" server
 var app = express();
 
+// Requiring our models for syncing
+var db = require("./models");
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
@@ -29,11 +32,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-//maybe we don;t use handlebars SINCE ITS NOT REQUIRED and just serve regular html instead? (see author post activity)
-var exphbs = require("express-handlebars");
+// //maybe we don;t use handlebars SINCE ITS NOT REQUIRED and just serve regular html instead? (see author post activity)
+// var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 // ================================================================================
 // ROUTER
