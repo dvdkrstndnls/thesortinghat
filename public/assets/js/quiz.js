@@ -1,13 +1,14 @@
 // $(document).ready(function() {
     
-//   $("").on("submit", function(event) {
+//   $("#submit").on("submit", function(event) {
 //     event.preventDefault();
 
-//     var burger_id = $(this).children(".burger_id").val();
-//     console.log(burger_id);
+    // $("chosen-select")
+//     var quiz = $(this).children(".burger_id").val();
+//     console.log(quiz);
 //     $.ajax({
 //       method: "PUT",
-//       url: "/burgers/" + burger_id
+//       url: "/quiz/" + burger_id
 //     }).then(function(data) {
 //       // reload page to display devoured burger in proper column
 //       location.reload();
@@ -15,3 +16,5 @@
 
 //   });
 // });
+
+

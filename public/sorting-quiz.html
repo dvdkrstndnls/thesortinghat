@@ -38,15 +38,15 @@
     <input type="text" id="location" class="form-control" required>
 
     <h4>Email (Required)</h4>
-    <input type="text" id="email" class="form-control" required>
+    <input type="text" id="email" class="form-control" placeholder="name@example.com"required>
 
     <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required>
+    <input type="text" id="photo" class="form-control-file" required>
 
 <!-- extra user info from sherry's paper goes here -->
 
 <hr>
-
+<form id = "quizform">
 <h3>
   <strong>Question 1</strong>
 </h3>
@@ -188,7 +188,7 @@
   <strong>Question 12</strong>
 </h3>
 <h4>You enter an enchanted garden. Which would you be most curious to examine first? </h4>
-<select class="chosen-select" id="q10">
+<select name = " "class="chosen-select" id="q10">
   <option value=""></option>
   <option value="1">A. The statue of an old wizard with a strangely twinkling eye</option>
   <option value="2">B. The bubbling pool, in the depths of which something luminous is swirling</option>
@@ -230,6 +230,7 @@
   <option value="3">C. Waking up to find that neither your friends nor your family have any idea who you are </option>
   <option value="4">D. Being forced to speak in such a silly voice that hardly anyone can understand you, and everyone is laughing </option>
 </select>
+</form>
     <br>
     <br>
 
@@ -317,6 +318,10 @@
         // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
+          age: $("#age").val(),
+          gender: $("#gender").val(),
+          location: $("location").val(),
+          email: $("#email").val(),
           photo: $("#photo").val(),
           scores: [
             $("#q1").val(),
@@ -328,7 +333,12 @@
             $("#q7").val(),
             $("#q8").val(),
             $("#q9").val(),
-            $("#q10").val()
+            $("#q10").val(),
+            $("#q11").val(),
+            $("#q12").val(),
+            $("#q13").val(),
+            $("#q14").val(),
+            $("#q15").val(),
           ]
         };
 
