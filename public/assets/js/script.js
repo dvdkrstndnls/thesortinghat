@@ -15,3 +15,8 @@ $(document).ready(function() {
 
   });
 });
+IDBCurso.User  = function(sequelize, DataTypes) {
+  var User = sequelize ("User", {
+
+  })
+}

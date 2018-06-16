@@ -25,6 +25,7 @@
 <body>
 
   <div class="container">
+
     <div class="row">
       <div class="col">
         <h2>SORTING QUIZ</h2>
@@ -62,7 +63,6 @@
             <img src="./assets/images/allhouses.jpg" width="470px" height="410px">
           </div>
         </div>
-
       
         <!-- extra user info from sherry's paper goes here -->
 
@@ -364,9 +364,8 @@
       </div>
     </div>
   </div>
+
   <!-- END OF QUESTION CONTAINER FOR SORTING !!!! -->
-
-
   <!-- Modal -->
   <div  id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -507,7 +506,13 @@
           photo: $("#photo").val(),
           team: team
         };
-
+        
+        var results = {
+          name: $("#name"),
+          gender: $("#gender"),
+          location: $("location"),
+          team: team
+        }
 
         //logic//
         // console.log($("#quizform").serialize());
@@ -531,10 +536,13 @@
         //we will replace the remaining logic with something that connects to Sequelize DB
 
         // AJAX post the data to the friends API.
+        
+      
+      
         $.post("/api/sorting-quiz", userData, function (data) {
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
+          $("#match-name").text(results.team);
           $("#match-img").attr("src", data.photo);
 
           // Show the modal with the best match
