@@ -19,6 +19,9 @@ var PORT = process.env.PORT || 8000;
 // Tells node that we are creating an "express" server
 var app = express();
 
+// Requiring our models for syncing
+var db = require("./models");
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
@@ -29,11 +32,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-//maybe we don;t use handlebars SINCE ITS NOT REQUIRED and just serve regular html instead? (see author post activity)
-var exphbs = require("express-handlebars");
+// //maybe we don;t use handlebars SINCE ITS NOT REQUIRED and just serve regular html instead? (see author post activity)
+// var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 // ================================================================================
 // ROUTER
@@ -45,24 +48,18 @@ app.set("view engine", "handlebars");
 require("./controllers/apiRoutes.js")(app);
 require("./controllers/htmlRoutes.js")(app);
 
-var routes = require("./controllers/burgersController.js");
-
-app.use(routes);
 
 // ==============================================================================
 // LISTENER
 // The below code effectively "starts" our server
 // ==============================================================================
 
-//perhaps we delete the 3 below lines?
-app.listen(PORT, function() {
-  console.log("Listening on port:%s", PORT);
-});
-
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync(
+  // { force: true } use this to run locally but comment out to deploy (aka keep this commented unless you want to deleete all the DB data)
+).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

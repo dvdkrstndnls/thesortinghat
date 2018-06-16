@@ -1,4 +1,4 @@
--- Drops the blogger if it exists currently --
+-- Drops the quiz results for each user if it exists currently --
 DROP DATABASE IF EXISTS users;
--- Creates the "blogger" database --
+-- Creates the "quiz results for each submission" database --
 CREATE DATABASE users;

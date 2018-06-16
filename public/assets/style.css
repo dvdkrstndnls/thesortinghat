@@ -9,6 +9,10 @@ body {
   float: right;
 } */
 
+.jumbotron{
+  background-color: peachpuff;
+}
+
 
 #topform {
   display: flex;
