@@ -16,7 +16,7 @@ module.exports = function(app) {
       attributes: ['name', 'gender', 'location', 'team'],
       where: { team: 'hufflepuff' }
     }).then(function(response){
-      res.json(response.length);
+      res.json(response.length); //in the future remove length to get ALL of the data out of DB
     })
     .catch(function(err) {
       // print the error details
