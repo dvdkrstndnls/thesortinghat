@@ -46,7 +46,6 @@
     <input type="text" id="photo" class="form-control-file" required>
 
     <!-- extra user info from sherry's paper goes here -->
-    <!-- "1" = hufflepuff, "2" = gryffindor ... -->
     <hr>
     <form id="quizform">
       <h3>
@@ -196,7 +195,7 @@
         <strong>Question 12</strong>
       </h3>
       <h4>You enter an enchanted garden. Which would you be most curious to examine first? </h4>
-      <select name="q" class="chosen-select" id="q10">
+      <select class="chosen-select" id="q12">
         <option value=""></option>
         <option value="s">A. The statue of an old wizard with a strangely twinkling eye</option>
         <option value="g">B. The bubbling pool, in the depths of which something luminous is swirling</option>
@@ -208,7 +207,7 @@
         <strong>Question 13</strong>
       </h3>
       <h4>Which of the following would you most like to study?</h4>
-      <select class="chosen-select" id="q10">
+      <select class="chosen-select" id="q13">
         <option value=""></option>
         <option value="h">A. Centaurs</option>
         <option value="g">B. Goblins</option>
@@ -219,7 +218,7 @@
         <strong>Question 14</strong>
       </h3>
       <h4>What road tempts you the most? </h4>
-      <select class="chosen-select" id="q10">
+      <select class="chosen-select" id="q14">
         <option value=""></option>
         <option value="s">A. Narrow, dark, lantern-lit alley </option>
         <option value="h">B. Cobblestoned street lined with ancient buildings</option>
@@ -231,7 +230,7 @@
         <strong>Question 15</strong>
       </h3>
       <h4>Which nightmare would frighten you the most?</h4>
-      <select class="chosen-select" id="q10">
+      <select class="chosen-select" id="q15">
         <option value=""></option>
         <option value="h">A. Standing on top of something very high and realizing suddenly that there are no handholds or footholds, nor any
           barrier to stop you falling </option>
@@ -240,7 +239,7 @@
         <option value="g">D. Being forced to speak in such a silly voice that hardly anyone can understand you, and everyone is laughing </option>
       </select>
     </form>
-    <br>
+    <br>  
     <br>
 
     <!-- Submit Button -->
@@ -259,7 +258,7 @@
     </footer>
 
   </div>
-
+<!-- QUESTIONS END HERE -->
   <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -398,7 +397,13 @@
           photo: $("#photo").val(),
           team: team
         };
-
+        
+        var results = {
+          name: $("#name"),
+          gender: $("#gender"),
+          location: $("location"),
+          team: team
+        }
 
         //logic//
         // console.log($("#quizform").serialize());
@@ -422,10 +427,13 @@
         //we will replace the remaining logic with something that connects to Sequelize DB
 
         // AJAX post the data to the friends API.
+        
+      
+      
         $.post("/api/sorting-quiz", userData, function (data) {
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
+          $("#match-name").text(results.team);
           $("#match-img").attr("src", data.photo);
 
           // Show the modal with the best match
