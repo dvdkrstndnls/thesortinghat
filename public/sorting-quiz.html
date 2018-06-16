@@ -44,7 +44,7 @@
     <input type="text" id="photo" class="form-control-file" required>
 
 <!-- extra user info from sherry's paper goes here -->
-
+<!-- "1" = hufflepuff, "2" = gryffindor ... -->
 <hr>
 <form id = "quizform">
 <h3>
@@ -230,12 +230,13 @@
   <option value="3">C. Waking up to find that neither your friends nor your family have any idea who you are </option>
   <option value="4">D. Being forced to speak in such a silly voice that hardly anyone can understand you, and everyone is laughing </option>
 </select>
+<!--need 17 questions-->
 </form>
     <br>
     <br>
 
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="sort"><i class="fa fa-check-circle" aria-hidden="true"></i>
      Sort Me into my House!</button>
 
     <hr>
@@ -292,7 +293,7 @@
     }
 
     // Capture the form inputs
-    $("#submit").on("click", function(event) {
+    $("#sort").on("click", function(event) {
       event.preventDefault();
 
       // Form validation
@@ -341,6 +342,22 @@
             $("#q15").val(),
           ]
         };
+
+//logic//
+
+        function howMany(selectObjet) {
+          var hufflepuff = 1;
+          for (var hufflepuff = 1; i< selectObject.options.length; i++) {
+            if (selectObject.options[i]. selected) {
+              hufflepuff++
+            }
+          }
+        }
+
+        var sort = document.getById("sort");
+        sort.addEventListner("sort", function() {
+          alert("Congratulations! You have been placed into: " + howMany(document.selectForm.quizform))
+        });
 
 
         //we will replace the remaining logic with something that connects to Sequelize DB
