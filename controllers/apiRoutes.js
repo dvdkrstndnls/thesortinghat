@@ -13,9 +13,10 @@ module.exports = function(app) {
 
   app.get("/api/sorting-quiz", function(req, res) {
     db.User.findAll({  
-      attributes: ['name', 'gender', 'location', 'team']
+      attributes: ['name', 'gender', 'location', 'team'],
+      where: { team: 'hufflepuff' }
     }).then(function(response){
-      res.json(response);
+      res.json(response.length);
     })
     .catch(function(err) {
       // print the error details
