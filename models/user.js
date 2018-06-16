@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Users = sequelize.define("Users", {
+  var User = sequelize.define("User", {
     // Giving the Users model a name of type STRING
     name: DataTypes.STRING,
     age: DataTypes.INTEGER, //integer   ///validation would be ideal
@@ -21,6 +21,6 @@ module.exports = function(sequelize, DataTypes) {
   //   });
   // };
 
-  return Users;
+  return User;
 };
 

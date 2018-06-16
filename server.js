@@ -48,9 +48,6 @@ app.use(bodyParser.json());
 require("./controllers/apiRoutes.js")(app);
 require("./controllers/htmlRoutes.js")(app);
 
-var routes = require("./controllers/usersController.js");
-
-app.use(routes);
 
 // ==============================================================================
 // LISTENER
@@ -60,7 +57,9 @@ app.use(routes);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync(
+  // { force: true } use this to run locally but comment out to deploy (aka keep this commented unless you want to deleete all the DB data)
+).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
