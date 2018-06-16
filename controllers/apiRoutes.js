@@ -12,8 +12,18 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/api/sorting-quiz", function(req, res) {
-    res.json(sorting);
+    db.User.findAll({  
+      attributes: ['name', 'gender', 'location', 'team']
+    }).then(function(response){
+      res.json(response);
+    })
+    .catch(function(err) {
+      // print the error details
+      console.log(err);
+
   });
+});
+  
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
@@ -38,7 +48,10 @@ module.exports = function(app) {
 
     db.User.create(user).then(function(results) {
       res.json(results)
-    });
+    }).catch(function(err) {
+      // print the error details
+      console.log(err);
+  });;
     
   });
 };
