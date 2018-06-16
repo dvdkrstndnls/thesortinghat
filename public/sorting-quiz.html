@@ -5,320 +5,437 @@
   <meta charset="UTF-8">
   <title>SORTING QUIZ</title>
 
+
+
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+
   <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="icon" href="assets/images/vold.png">
 
 </head>
 
 <body>
 
   <div class="container">
-<!-- here we show the quiz that is used to gain insight into user personality for the purpose of sorting into 'Houses' -->
-    <h2>SORTING QUIZ</h2>
-    <hr>
+    <div class="row">
 
-    <h3><strong>About You</strong></h3>
-    <h4>Name (Required)</h4>
-    <input type="text" id="name" class="form-control" required>
+      <div class="col">
+        <!-- here we show the quiz that is used to gain insight into user personality for the purpose of sorting into 'Houses' -->
+        <h2>SORTING QUIZ</h2>
+        <hr>
+        
+      <div class= "container" id= "topform">
+        <div class="col-sm-6">
+          <h3>
+            <strong>About You</strong>
+          </h3>
+          <h4>Name (Required)</h4>
+          <input type="text" id="name" class="form-control h-20" required>
 
-    <h4>Age (Required)</h4>
-    <input type="text" id="age" class="form-control" required>
+          <h4>Age (Required)</h4>
+          <input type="text" id="age" class="form-control" required>
 
-    <h4>Gender (Required)</h4>
-    <input type="text" id="gender" class="form-control" required>
+          <h4>Gender (Required)</h4>
+          <input type="text" id="gender" class="form-control" required>
 
-    <h4>Location (Required)</h4>
-    <input type="text" id="location" class="form-control" required>
+          <h4>Location (Required)</h4>
+          <input type="text" id="location" class="form-control" required>
 
-    <h4>Email (Required)</h4>
-    <input type="text" id="email" class="form-control" required>
+          <h4>Email (Required)</h4>
+          <input type="text" id="email" class="form-control" required>
 
-    <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required>
+          <h4>Link to Photo Image (Required)</h4>
+          <input type="text" id="photo" class="form-control" required>
+        </div>
 
-<!-- extra user info from sherry's paper goes here -->
+        <div class= "col-sm-6" id="img">
+        <a href="https://fontmeme.com/harry-potter-font/"><img src="https://fontmeme.com/permalink/180616/80221c2389288a18b00e0c3130a4ad97.png" id= "title" alt="harry-potter-font" border="0" width="480px"></a>
+          <img src= "./assets/images/allhouses.jpg" width="470px" height="410px">
 
-<hr>
-
-<h3>
-  <strong>Question 1</strong>
-</h3>
-<h4>Which of the following would you most hate people to call you?</h4>
-<select class="chosen-select" id="q1">
-  <option value=""></option>
-  <option value="1">A. Selfish </option>
-  <option value="2">B. Coward</option>
-  <option value="3">C. Ignorant </option>
-  <option value="4">D. Ordinary</option>
-</select>
-
-<h3>
-  <strong>Question 2</strong>
-</h3>
-<h4>Given the choice, would you rather invent a potion that would guarantee you…</h4>
-<select class="chosen-select" id="q2">
-  <option value=""></option>
-  <option value="1">A. Love</option>
-  <option value="2">B. Wisdom</option>
-  <option value="3">C. Glory</option>
-  <option value="4">D. Power</option>
-</select>
-
-
-<h3>
-  <strong>Question 3</strong>
-</h3>
-<h4>Which would you rather be?</h4>
-<select class="chosen-select" id="q3">
-  <option value=""></option>
-  <option value="1">A. Trusted</option>
-  <option value="2">B. Liked</option>
-  <option value="3">C. Feared</option>
-  <option value="4">D. Praised</option>
-</select>
-
-
-<h3>
-  <strong>Question 4</strong>
-</h3>
-<h4>After you have died, what would like most people to do when they hear your name?</h4>
-<select class="chosen-select" id="q4">
-  <option value=""></option>
-  <option value="1">A. Miss you, but smile</option>
-  <option value="2">B. Ask for more stories of your adventure</option>
-  <option value="3">C. Think with admiration of your achievements</option>
-  <option value="4">D. I don’t care what people think of me after I'm dead. Its what they think of me when I'm alive that counts. </option>
-</select>
-
-
-<h3>
-  <strong>Question 5</strong>
-</h3>
-<h4>Four goblets are placed in front of you, which do you choose to drink?</h4>
-<select class="chosen-select" id="q5">
-  <option value=""></option>
-  <option value="1">A. The mysterious black liquid that gleams like ink, and gives off fumes that make you see strange visions </option>
-  <option value="2">B. The foaming, frothing, silvery, liquid that sparkles, as though containing ground diamonds </option>
-  <option value="3">C. The golden liquid so bright that it hurts the eye, and which makes sunspots dance all around the room.</option>
-  <option value="4">D. The thick, smooth, richly purple drink that gives off a delicious smell of chocolate and plums</option>
-</select>
-
-
-<h3>
-  <strong>Question 6</strong>
-</h3>
-<h4>A troll has gone berserk in the Headmaster’s study at Hogwarts. It is about to smash, crush, and tear several irreplaceable items and treasures, including a cure for dragon pox, which the Headmaster has nearly perfected; student records going back 2500 years and a mysterious handwritten book full of strange runes, believed to have belonged to Merlin. In which order would you rescue these objects from the trolls club, if you could? </h4>
-<select class="chosen-select" id="q6">
-  <option value=""></option>
-  <option value="1">A. Cure, Book, Records</option>
-  <option value="2">B. Book, Records, Cure</option>
-  <option value="3">C. Records, Cure, Book </option>
-  <option value="4">D. Cure, Records, Book</option>
-</select>
-
-
-<h3>
-  <strong>Question 7</strong>
-</h3>
-<h4>When I make decisions, I … </h4>
-<select class="chosen-select" id="q7">
-  <option value=""></option>
-  <option value="1">A. Make sure it works out for me </option>
-  <option value="2">B. Think about how it will affect others</option>
-  <option value="3">C. Consider every option carefully</option>
-  <option value="4">D. Take chances and pick the risky choice </option>
-</select>
-
-<h3>
-  <strong>Question 8</strong>
-</h3>
-<h4>My favorite subject in school was …. </h4>
-<select class="chosen-select" id="q8">
-  <option value=""></option>
-  <option value="1">A. History</option>
-  <option value="2">B. Science or Math </option>
-  <option value="3">C. English</option>
-  <option value="4">D. Band</option>
-</select>
-
-<h3>
-  <strong>Question 9</strong>
-</h3>
-<h4>I like to spend time with people who …</h4>
-<select class="chosen-select" id="q9">
-  <option value=""></option>
-  <option value="1">A. Are smart</option>
-  <option value="2">B. Are different and creative</option>
-  <option value="3">C. Are kind</option>
-  <option value="4">D. Are the same as me</option>
-</select>
-
-<h3>
-  <strong>Question 10</strong>
-</h3>
-<h4>Four boxes are placed before you. Which box would you try and open?</h4>
-<select class="chosen-select" id="q10">
-  <option value=""></option>
-  <option value="1">A. The ornate golden casket, standing on clawed feet, whose inscription warns that the box holds both secret knowledge and unbearable temptation lie within. </option>
-  <option value="2">B. The gleaming jet black box with a silver lock and key, marked with a mysterious rune that you know to be the mark of Merlin. </option>
-  <option value="3">C. The small pewter box, unassuming and plain, with a scratched message upon it that reads “I open only for the worthy.”</option>
-  <option value="4">D. The small tortoiseshell box, embellished with gold, inside which some small creature seems to be squeaking. </option>
-</select>
-
-<h3>
-  <strong>Question 11</strong>
-</h3>
-<h4>Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it lured you, you would smell of... </h4>
-<select class="chosen-select" id="q10">
-  <option value=""></option>
-  <option value="1">A. Crackling log fire </option>
-  <option value="2">B. Parchment</option>
-  <option value="3">C. The sea</option>
-  <option value="4">D. Home</option>
-</select>
-
-<h3>
-  <strong>Question 12</strong>
-</h3>
-<h4>You enter an enchanted garden. Which would you be most curious to examine first? </h4>
-<select class="chosen-select" id="q10">
-  <option value=""></option>
-  <option value="1">A. The statue of an old wizard with a strangely twinkling eye</option>
-  <option value="2">B. The bubbling pool, in the depths of which something luminous is swirling</option>
-  <option value="3">C. The silver leafed tree bearing golden apples</option>
-  <option value="4">D. The fat red toadstools that appears to be talking to each other</option>
-</select>
-
-<h3>
-  <strong>Question 13</strong>
-</h3>
-<h4>Which of the following would you most like to study?</h4>
-<select class="chosen-select" id="q10">
-  <option value=""></option>
-  <option value="1">A. Centaurs</option>
-  <option value="2">B. Goblins</option>
-  <option value="3">C. Mermaids</option>
-  <option value="4">D. Werewolves</option>
-</select>
-<h3>
-  <strong>Question 14</strong>
-</h3>
-<h4>What road tempts you the most? </h4>
-<select class="chosen-select" id="q10">
-  <option value=""></option>
-  <option value="1">A. Narrow, dark, lantern-lit alley </option>
-  <option value="2">B. Cobblestoned street lined with ancient buildings</option>
-  <option value="3">C. Sunny, wide, grassy lane. </option>
-  <option value="4">D. The twisting leaf-strewn path through the woods</option>
-</select>
-
-<h3>
-  <strong>Question 15</strong>
-</h3>
-<h4>Which nightmare would frighten you the most?</h4>
-<select class="chosen-select" id="q10">
-  <option value=""></option>
-  <option value="1">A. Standing on top of something very high and realizing suddenly that there are no handholds or footholds, nor any barrier to stop you falling </option>
-  <option value="2">B. An eye at the keyhole of the dark, windowless room in which you are locked, full of giant spiders</option>
-  <option value="3">C. Waking up to find that neither your friends nor your family have any idea who you are </option>
-  <option value="4">D. Being forced to speak in such a silly voice that hardly anyone can understand you, and everyone is laughing </option>
-</select>
-    <br>
-    <br>
-
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-     Sort Me into my House!</button>
-
-    <hr>
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/sorting-quiz">API Sorting List</a> | <a href="https://github.com/dvdkrstndnls/thesortinghat">GitHub Repo</a></p>
+        </div>
+        </div>
       </div>
-    </footer>
 
+
+        <!-- extra user info from sherry's paper goes here -->
+      <div class="container" id="questions">
+        <hr>
+        <div class="col-sm-12">
+        <h3>
+          <strong>Question 1</strong>
+        </h3>
+        <h4>Which of the following would you most hate people to call you?</h4>
+        <select class="chosen-select w-100" id="q1">
+          <option value=""></option>
+          <option value="1">A. Selfish </option>
+          <option value="2">B. Coward</option>
+          <option value="3">C. Ignorant </option>
+          <option value="4">D. Ordinary</option>
+        </select>
+        
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 2</strong>
+        </h3>
+        <h4>Given the choice, would you rather invent a potion that would guarantee you…</h4>
+        <select class="chosen-select w-100" id="q2">
+          <option value=""></option>
+          <option value="1">A. Love</option>
+          <option value="2">B. Wisdom</option>
+          <option value="3">C. Glory</option>
+          <option value="4">D. Power</option>
+        </select>
+
+        <br>
+        <br>
+
+
+        <h3>
+          <strong>Question 3</strong>
+        </h3>
+        <h4>Which would you rather be?</h4>
+        <select class="chosen-select w-100" id="q3">
+          <option value=""></option>
+          <option value="1">A. Trusted</option>
+          <option value="2">B. Liked</option>
+          <option value="3">C. Feared</option>
+          <option value="4">D. Praised</option>
+        </select>
+
+        <br>
+        <br>
+
+
+        <h3>
+          <strong>Question 4</strong>
+        </h3>
+        <h4>After you have died, what would like most people to do when they hear your name?</h4>
+        <select class="chosen-select w-100" id="q4">
+          <option value=""></option>
+          <option value="1">A. Miss you, but smile</option>
+          <option value="2">B. Ask for more stories of your adventure</option>
+          <option value="3">C. Think with admiration of your achievements</option>
+          <option value="4">D. I don’t care what people think of me after I'm dead. Its what they think of me when I'm alive that counts. </option>
+        </select>
+
+        <br>
+        <br>
+
+
+        <h3>
+          <strong>Question 5</strong>
+        </h3>
+        <h4>Four goblets are placed in front of you, which do you choose to drink?</h4>
+        <select class="chosen-select w-100" id="q5">
+          <option value=""></option>
+          <option value="1">A. The mysterious black liquid that gleams like ink, and gives off fumes that make you see strange visions </option>
+          <option value="2">B. The foaming, frothing, silvery, liquid that sparkles, as though containing ground diamonds </option>
+          <option value="3">C. The golden liquid so bright that it hurts the eye, and which makes sunspots dance all around the room.</option>
+          <option value="4">D. The thick, smooth, richly purple drink that gives off a delicious smell of chocolate and plums</option>
+        </select>
+
+        <br>
+        <br>
+
+
+        <h3>
+          <strong>Question 6</strong>
+        </h3>
+        <h4>A troll has gone berserk in the Headmaster’s study at Hogwarts. It is about to smash, crush, and tear several irreplaceable
+          items and treasures, including a cure for dragon pox, which the Headmaster has nearly perfected; student records
+          going back 2500 years and a mysterious handwritten book full of strange runes, believed to have belonged to Merlin.
+          In which order would you rescue these objects from the trolls club, if you could? </h4>
+        <select class="chosen-select w-100" id="q6">
+          <option value=""></option>
+          <option value="1">A. Cure, Book, Records</option>
+          <option value="2">B. Book, Records, Cure</option>
+          <option value="3">C. Records, Cure, Book </option>
+          <option value="4">D. Cure, Records, Book</option>
+        </select>
+
+        <br>
+        <br>
+
+
+        <h3>
+          <strong>Question 7</strong>
+        </h3>
+        <h4>When I make decisions, I … </h4>
+        <select class="chosen-select w-100" id="q7">
+          <option value=""></option>
+          <option value="1">A. Make sure it works out for me </option>
+          <option value="2">B. Think about how it will affect others</option>
+          <option value="3">C. Consider every option carefully</option>
+          <option value="4">D. Take chances and pick the risky choice </option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 8</strong>
+        </h3>
+        <h4>My favorite subject in school was …. </h4>
+        <select class="chosen-select w-100" id="q8">
+          <option value=""></option>
+          <option value="1">A. History</option>
+          <option value="2">B. Science or Math </option>
+          <option value="3">C. English</option>
+          <option value="4">D. Band</option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 9</strong>
+        </h3>
+        <h4>I like to spend time with people who …</h4>
+        <select class="chosen-select w-100" id="q9">
+          <option value=""></option>
+          <option value="1">A. Are smart</option>
+          <option value="2">B. Are different and creative</option>
+          <option value="3">C. Are kind</option>
+          <option value="4">D. Are the same as me</option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 10</strong>
+        </h3>
+        <h4>Four boxes are placed before you. Which box would you try and open?</h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. The ornate golden casket, standing on clawed feet, whose inscription warns that the box holds both secret knowledge
+            and unbearable temptation lie within. </option>
+          <option value="2">B. The gleaming jet black box with a silver lock and key, marked with a mysterious rune that you know to be the
+            mark of Merlin. </option>
+          <option value="3">C. The small pewter box, unassuming and plain, with a scratched message upon it that reads “I open only for the
+            worthy.”
+          </option>
+          <option value="4">D. The small tortoiseshell box, embellished with gold, inside which some small creature seems to be squeaking.
+          </option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 11</strong>
+        </h3>
+        <h4>Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it lured
+          you, you would smell of... </h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. Crackling log fire </option>
+          <option value="2">B. Parchment</option>
+          <option value="3">C. The sea</option>
+          <option value="4">D. Home</option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 12</strong>
+        </h3>
+        <h4>You enter an enchanted garden. Which would you be most curious to examine first? </h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. The statue of an old wizard with a strangely twinkling eye</option>
+          <option value="2">B. The bubbling pool, in the depths of which something luminous is swirling</option>
+          <option value="3">C. The silver leafed tree bearing golden apples</option>
+          <option value="4">D. The fat red toadstools that appears to be talking to each other</option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 13</strong>
+        </h3>
+        <h4>Which of the following would you most like to study?</h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. Centaurs</option>
+          <option value="2">B. Goblins</option>
+          <option value="3">C. Mermaids</option>
+          <option value="4">D. Werewolves</option>
+        </select>
+
+        <br>
+        <br>
+        <h3>
+          <strong>Question 14</strong>
+        </h3>
+        <h4>What road tempts you the most? </h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. Narrow, dark, lantern-lit alley </option>
+          <option value="2">B. Cobblestoned street lined with ancient buildings</option>
+          <option value="3">C. Sunny, wide, grassy lane. </option>
+          <option value="4">D. The twisting leaf-strewn path through the woods</option>
+        </select>
+
+        <br>
+        <br>
+
+        <h3>
+          <strong>Question 15</strong>
+        </h3>
+        <h4>Which nightmare would frighten you the most?</h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. Standing on top of something very high and realizing suddenly that there are no handholds or footholds, or any
+            barrier to stop you falling </option>
+          <option value="2">B. An eye at the keyhole of the dark, windowless room in which you are locked, full of giant spiders</option>
+          <option value="3">C. Waking up to find that neither your friends nor your family have any idea who you are </option>
+          <option value="4">D. Being forced to speak in such a silly voice that hardly anyone can understand you, and everyone is laughing
+          </option>
+        </select>
+
+
+        <br>
+        <br>
+        <h3>
+          <strong>Question 16</strong>
+        </h3>
+        <h4>What pet would you bring to Hogwarts? </h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. Cat</option>
+          <option value="2">B. Owl</option>
+          <option value="3">C. Toad</option>
+          <option value="4">D. Mouse</option>
+        </select>
+
+        <br>
+        <br>
+        <h3>
+          <strong>Question 17</strong>
+        </h3>
+        <h4>What is the core of your wand of made out of? </h4>
+        <select class="chosen-select w-100" id="q10">
+          <option value=""></option>
+          <option value="1">A. Air</option>
+          <option value="2">B. Water</option>
+          <option value="3">C. Fire</option>
+          <option value="4">D. Rock</option>
+        </select>
+      
+
+        <br>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          Sort Me into my House!</button>
+
+        <hr>
+
+      </div>
+        <footer class="footer">
+          <div class="container">
+            <p>
+              <a href="/api/sorting-quiz">API Sorting List</a> |
+              <a href="https://github.com/dvdkrstndnls/thesortinghat">GitHub Repo</a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
   </div>
+</div>
+
+  <!-- END OF QUESTION CONTAINER FOR SORTING !!!! -->
+
 
   <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Here's Your House!</strong></h2>
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">
+              <strong>Here's Your House!</strong>
+            </h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
-        <div class="modal-body">
-          <h2 id="match-name"></h2>
-          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+  
       </div>
-
     </div>
-  </div>
-
-  <script type="text/javascript">
-    // Chosen CSS
-    var config = {
-      ".chosen-select": {},
-      ".chosen-select-deselect": {
-        allow_single_deselect: true
-      },
-      ".chosen-select-no-single": {
-        disable_search_threshold: 10
-      },
-      ".chosen-select-no-results": {
-        no_results_text: "Oops, nothing found!"
-      },
-      ".chosen-select-width": {
-        width: "95%"
+  
+    <script type="text/javascript">
+      // Chosen CSS
+      var config = {
+        ".chosen-select": {},
+        ".chosen-select-deselect": {
+          allow_single_deselect: true
+        },
+        ".chosen-select-no-single": {
+          disable_search_threshold: 10
+        },
+        ".chosen-select-no-results": {
+          no_results_text: "Oops, nothing found!"
+        },
+        ".chosen-select-width": {
+          width: "95%"
+        }
+      };
+  
+      for (var selector in config) {
+        $(selector).chosen(config[selector]);
       }
-    };
-
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
-
-    // Capture the form inputs
-    $("#submit").on("click", function(event) {
-      event.preventDefault();
-
-      // Form validation
-      function validateForm() {
-        var isValid = true;
-        $(".form-control").each(function() {
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-
-        $(".chosen-select").each(function() {
-
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-        return isValid;
-      }
-
-      // If all required fields are filled
-      if (validateForm()) {
-        // Create an object for the user"s data
-        var userData = {
-          name: $("#name").val(),
-          photo: $("#photo").val(),
-          scores: [
+  
+      // Capture the form inputs
+      $("#sort").on("click", function (event) {
+        event.preventDefault();
+  
+        // Form validation
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function () {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+  
+          $(".chosen-select").each(function () {
+  
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+  
+        // If all required fields are filled
+        if (validateForm()) {
+  
+          var answers = [
             $("#q1").val(),
             $("#q2").val(),
             $("#q3").val(),
@@ -328,30 +445,104 @@
             $("#q7").val(),
             $("#q8").val(),
             $("#q9").val(),
-            $("#q10").val()
+            $("#q10").val(),
+            $("#q11").val(),
+            $("#q12").val(),
+            $("#q13").val(),
+            $("#q14").val(),
+            $("#q15").val(),
+            $("#q16").val(),
+            $("#q17").val(),
           ]
-        };
-
-
-        //we will replace the remaining logic with something that connects to Sequelize DB
-
-        // AJAX post the data to the friends API.
-        $.post("/api/sorting-quiz", userData, function(data) {
-
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
-
-          // Show the modal with the best match
-          $("#results-modal").modal("toggle");
-
-        });
-      } else {
-        alert("Please fill out all fields before submitting!");
-      }
-    });
-  </script>
-
+  
+          var gryffindorScore = 0;
+          var slytherinScore = 0;
+          var hufflepuffScore = 0;
+          var ravenclawScore = 0;
+  
+          answers.forEach(function (answer) {
+  
+            if (answer === "g") {
+              gryffindorScore++
+            } else if (answer === "s") {
+              slytherinScore++
+            } else if (answer === "h") {
+              hufflepuffScore++
+            } else if (answer === "r") {
+              ravenclawScore++
+            }
+          });
+  
+          var team;
+  
+          if (gryffindorScore > slytherinScore
+            && grffindoreScore > hufflepuffScore
+            && gryffindorScore > ravenclawScore) {
+            team = "gryffindor"
+  
+          } else if (slytherinScore > gryffindorScore
+            && slytherinScore > hufflepuffScore
+            && slytherinScore > ravenclawScore) {
+            team = "slytherin"
+  
+          } else if (hufflepuffScore > gryffindorScore
+            && hufflepuffScore > ravenclawScore
+            && hufflepuffScore > slytherinScore) {
+            team = "hufflepuff"
+  
+          } else {
+            team = "ravenclaw"
+          };
+  
+          // Create an object for the user"s data
+          var userData = {
+            name: $("#name").val(),
+            age: $("#age").val(),
+            gender: $("#gender").val(),
+            location: $("location").val(),
+            email: $("#email").val(),
+            photo: $("#photo").val(),
+            team: team
+          };
+  
+  
+          //logic//
+          // console.log($("#quizform").serialize());
+  
+          // function howMany(selectObjet) {
+          //   var hufflepuff = 1;
+          //   for (var hufflepuff = 1; i< selectObject.options.length; i++) {
+          //     if (selectObject.options[i]. selected) {
+          //       hufflepuff++ 
+          //     }
+          //     else (hufflepuff = false);
+          //   }
+          // }
+  
+          // var sort = document.getById("sort");
+          // sort.addEventListner("sort", function() {
+          //   alert("Congratulations! You have been placed into: " + howMany(document.selectForm.quizform))
+          // });
+  
+  
+          //we will replace the remaining logic with something that connects to Sequelize DB
+  
+          // AJAX post the data to the friends API.
+          $.post("/api/sorting-quiz", userData, function (data) {
+  
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+  
+            // Show the modal with the best match
+            $("#results-modal").modal("toggle");
+  
+          });
+        } else {
+          alert("Please fill out all fields before submitting!");
+        }
+      });
+    </script>
 </body>
 
 </html>
