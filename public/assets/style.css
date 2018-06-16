@@ -1,26 +1,37 @@
 body {
-  width: 99%;
-  height: 900px;
-  background-color: #fc6;
+ 
+  background-color: red;
 }
 
-#top-bar {
-  margin-top: 28px;
+
+/* 
+#img {
+  float: right;
+} */
+
+.jumbotron{
+  background-color: peachpuff;
 }
 
-.spacing-reset {
-  padding: 0;
-  margin: 0;
-  border: 0;
+
+#topform {
+  display: flex;
 }
 
-.list-reset {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  border: 0;
+#title{
+  padding-bottom: 30px;
 }
 
+#questions{
+  width: auto;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
 @media (min-width: 1200px) {
   .container {
     width: 990px;
