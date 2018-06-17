@@ -1,11 +1,26 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     // Giving the Users model a name of type STRING
-    name: DataTypes.STRING,
-    age: DataTypes.INTEGER, //integer   ///validation would be ideal
-    gender: DataTypes.STRING,
-    location: DataTypes.STRING,
-    email: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }, 
+    gender: {
+      type: DataTypes.STRING
+    },
+    location: {
+      type: DataTypes.STRING
+    },
+    email: {
+      type: DataTypes.STRING
+    },
     photo: DataTypes.STRING,
     submission_date: DataTypes.DATE , ///date format validation would be idea
     team: DataTypes.STRING,
