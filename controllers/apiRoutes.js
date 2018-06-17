@@ -24,7 +24,7 @@ module.exports = function(app) {
 
   });
 });
-  
+
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.

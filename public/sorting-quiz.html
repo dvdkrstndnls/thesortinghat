@@ -242,7 +242,7 @@
               </h3>
               <h4>Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it
                 lured you, you would smell of... </h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q11">
                 <option value=""></option>
                 <option value="g">A. Crackling log fire </option>
                 <option value="r">B. Parchment</option>
@@ -257,7 +257,7 @@
                 <strong>Question 12</strong>
               </h3>
               <h4>You enter an enchanted garden. Which would you be most curious to examine first? </h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q12">
                 <option value=""></option>
                 <option value="s">A. The statue of an old wizard with a strangely twinkling eye</option>
                 <option value="g">B. The bubbling pool, in the depths of which something luminous is swirling</option>
@@ -272,7 +272,7 @@
                 <strong>Question 13</strong>
               </h3>
               <h4>Which of the following would you most like to study?</h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q13">
                 <option value=""></option>
                 <option value="h">A. Centaurs</option>
                 <option value="g">B. Goblins</option>
@@ -286,7 +286,7 @@
                 <strong>Question 14</strong>
               </h3>
               <h4>What road tempts you the most? </h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q14">
                 <option value=""></option>
                 <option value="s">A. Narrow, dark, lantern-lit alley </option>
                 <option value="h">B. Cobblestoned street lined with ancient buildings</option>
@@ -301,7 +301,7 @@
                 <strong>Question 15</strong>
               </h3>
               <h4>Which nightmare would frighten you the most?</h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q15">
                 <option value=""></option>
                 <option value="h">A. Standing on top of something very high and realizing suddenly that there are no handholds or footholds,
                   or any barrier to stop you falling </option>
@@ -318,7 +318,7 @@
                 <strong>Question 16</strong>
               </h3>
               <h4>What pet would you bring to Hogwarts? </h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q16">
                 <option value=""></option>
                 <option value="h">A. Cat</option>
                 <option value="g">B. Owl</option>
@@ -332,7 +332,7 @@
                 <strong>Question 17</strong>
               </h3>
               <h4>What is the core of your wand of made out of? </h4>
-              <select class="chosen-select w-100" id="q10">
+              <select class="chosen-select w-100" id="q17">
                 <option value=""></option>
                 <option value="r">A. Air</option>
                 <option value="s">B. Water</option>
@@ -366,7 +366,7 @@
   </div>
 
   <!-- END OF QUESTION CONTAINER FOR SORTING !!!! -->
-  <!-- Modal -->
+  Modal
   <div  id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -379,13 +379,74 @@
           </h2>
         </div>
         <div class="modal-body">
-          <h2 id="match-name"></h2>
-          <img id="match-img" src="./assets/images/gryff.jpg" alt="gryffindor">
+          <h2 id ="match-name"></h2>
+
+          <img id ="match-gryffindor" src="./assets/images/gryff.jpg" alt = "gryffindor">
+
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">
+            <strong>Here's Your House!</strong>
+          </h2>
+        </div>
+        <div class="modal-body">
+          <h2 id ="match-name"></h2>
+
+          <img id = "match-hufflepuff" src = "./assets/images/huff.jpg" alt = "hufflepuff">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">
+            <strong>Here's Your House!</strong>
+          </h2>
+        </div>
+        <div class="modal-body">
+          <h2 id ="match-name"></h2>
+
+          <img id = "match-ravenclaw" src = "./assets/images/raven.jpg" alt = "ravenclaw">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">
+            <strong>Here's Your House!</strong>
+          </h2>
+        </div>
+        <div class="modal-body">
+          <h2 id ="match-name"></h2>
+
+          <img id = "match-slytherin" src = "./assets/images/sly.jpg" alt = "slytherin">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
 
     </div>
   </div>
@@ -462,18 +523,21 @@
         var hufflepuffScore = 0;
         var ravenclawScore = 0;
 
-        answers.forEach(function (answer) {
+        answers.forEach(function (value) {
 
-          if (answer === "g") {
+          if (value === "g") {
             gryffindorScore++
-          } else if (answer === "s") {
+          } else if (value === "s") {
             slytherinScore++
-          } else if (answer === "h") {
+          } else if (value === "h") {
             hufflepuffScore++
-          } else if (answer === "r") {
+          } else if (value === "r") {
             ravenclawScore++
           }
         });
+        console.log(value);
+        console.log(gryffindorScore);
+        console.log(slytherinScore);
 
         var team;
 
@@ -501,7 +565,7 @@
           name: $("#name").val(),
           age: $("#age").val(),
           gender: $("#gender").val(),
-          location: $("location").val(),
+          location: $("#location").val(),
           email: $("#email").val(),
           photo: $("#photo").val(),
           team: team
@@ -510,7 +574,7 @@
         var results = {
           name: $("#name"),
           gender: $("#gender"),
-          location: $("location"),
+          location: $("#location"),
           team: team
         }
 
@@ -545,14 +609,14 @@
           $("#name").text(results.name);
           $("#age").text(results.age);
           $("#gender").text(results.gender);
-          $("#location").text(results.name);
-          $("#photo").text(results.name);
-          $("#team").text(results.name);
+          $("#location").text(results.location);
+          $("#photo").text(results.photo);
+          $("#team").text(results.team);
 
           
 
           // Show the modal with the best match
-          $("#results-modal").modal("toggle");
+          $("#results-modal").modal(results.name);
 
         });
       } else {

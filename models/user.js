@@ -13,13 +13,16 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     }, 
     gender: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     location: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     email: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     photo: DataTypes.STRING,
     submission_date: DataTypes.DATE , ///date format validation would be idea
@@ -35,7 +38,8 @@ module.exports = function(sequelize, DataTypes) {
   //     onDelete: "cascade"
   //   });
   // };
-
+User.sync();
   return User;
-};
+module.exports = User.name;};
+
 
