@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "handlebars-helper-css": "^0.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvdkrstndnls/thesortinghat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dvdkrstndnls/thesortinghat/issues"
+  },
+  "homepage": "https://github.com/dvdkrstndnls/thesortinghat#readme"
 }

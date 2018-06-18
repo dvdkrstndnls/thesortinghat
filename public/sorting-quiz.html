@@ -372,7 +372,7 @@
     <div class="modal-dialog">
 
       <!-- Modal content-->
-      <div class="modal-content">
+      <!-- <div class="modal-content">
         <div class="modal-header">
           <button class="close" data-dismiss="modal">&times;</button>
           <h2 class="modal-title">
@@ -426,8 +426,10 @@
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
-      </div>
+      </div> -->
 
+
+      
 
       <div class="modal-content">
         <div class="modal-header">
@@ -438,9 +440,12 @@
         </div>
         <div class="modal-body">
           <h2 id ="match-name"></h2>
-
-          <img id = "match-slytherin" src = "./assets/images/sly.jpg" alt = "slytherin">
- 
+          <div id ='picDiv'></div>
+          <BR>
+          <a href="https://kayak.com">Book your flight</a>
+          for the next meet up at <i>The Wizarding World of Harry Potter</i> in Orlando, Florida!<br><br>
+          Your House is meeting on Labor Day (Monday, September 3, 2018) 11am at:<br><br>
+          <a href="https://www.universalorlando.com/web/en/us/theme-parks/islands-of-adventure/the-wizarding-world-of-harry-potter-hogsmeade/index.html#dining">Hog's Head</a> (Located in the back of Three Broomsticks™ in Hogsmeade™) - this is the place to stop in for a Butterbeer™ and Pumpkin Juice™
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
@@ -543,20 +548,41 @@ console.log(answers);
         if (gryffindorScore > slytherinScore &&
           grffindoreScore > hufflepuffScore &&
           gryffindorScore > ravenclawScore) {
-          team = "gryffindor"
+          team = "gryffindor";
+          var img = $("<img>");
+          img.attr('alt', 'no pic found');
+          img.attr('src','./assets/images/gryff.jpg');
+          $('#picDiv').empty();
+          $('#picDiv').append(img)
+
 
         } else if (slytherinScore > gryffindorScore &&
           slytherinScore > hufflepuffScore &&
           slytherinScore > ravenclawScore) {
-          team = "slytherin"
+          team = "slytherin";
+          var img = $("<img>");
+          img.attr('alt', 'no pic found');
+          img.attr('src','./assets/images/sly.jpg');
+          $('#picDiv').empty();
+          $('#picDiv').append(img)
 
         } else if (hufflepuffScore > gryffindorScore &&
           hufflepuffScore > ravenclawScore &&
           hufflepuffScore > slytherinScore) {
-          team = "hufflepuff"
+          team = "hufflepuff";
+          var img = $("<img>");
+          img.attr('alt', 'no pic found');
+          img.attr('src','./assets/images/huff.jpg');
+          $('#picDiv').empty();
+          $('#picDiv').append(img)
 
         } else {
           team = "ravenclaw"
+          var img = $("<img>");
+          img.attr('alt', 'no pic found');
+          img.attr('src','./assets/images/raven.jpg');
+          $('#picDiv').empty();
+          $('#picDiv').append(img)
         };
 console.log(team);
         // Create an object for the user"s data

@@ -25,7 +25,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     photo: DataTypes.STRING,
-    submission_date: DataTypes.DATE , ///date format validation would be idea
+    // submission_date: DataTypes.DATE , ///date format validation would be idea, commented out because sequelize's createdat is taking care of this functionality
     team: DataTypes.STRING,
 
 
