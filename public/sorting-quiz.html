@@ -345,9 +345,10 @@
             <br>
 
             <!-- Submit Button -->
-            <button data-toggle="modal" data-target="#results-modal" type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+            <button data-toggle="modal" data-target="#results-modal" type="submit" class="btn btn-primary btn-lg btn-block" id="sort">
               <i class="fa fa-check-circle" aria-hidden="true"></i>
-              Sort Me into my House!</button>
+              Sort Me into my House!
+            </button>
 
             <hr>
 
@@ -439,7 +440,7 @@
           <h2 id ="match-name"></h2>
 
           <img id = "match-slytherin" src = "./assets/images/sly.jpg" alt = "slytherin">
-
+ 
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
@@ -478,25 +479,25 @@
       event.preventDefault();
 
       // Form validation
-      function validateForm() {
-        var isValid = true;
-        $(".form-control").each(function () {
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
+      // function validateForm() {
+      //   var isValid = true;
+      //   $(".form-control").each(function () {
+      //     if ($(this).val() === "") {
+      //       isValid = false;
+      //     }
+      //   });
 
-        $(".chosen-select").each(function () {
+      //   $(".chosen-select").each(function () {
 
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-        return isValid;
-      }
+      //     if ($(this).val() === "") {
+      //       isValid = false;
+      //     }
+      //   });
+      //   return isValid;
+      // }
 
       // If all required fields are filled
-      if (validateForm()) {
+      if (true) {
 
         var answers = [
           $("#q1").val(),
@@ -517,12 +518,13 @@
           $("#q16").val(),
           $("#q17").val(),
         ]
+console.log(answers);
 
         var gryffindorScore = 0;
         var slytherinScore = 0;
         var hufflepuffScore = 0;
         var ravenclawScore = 0;
-
+        console.log('start')
         answers.forEach(function (value) {
 
           if (value === "g") {
@@ -534,10 +536,7 @@
           } else if (value === "r") {
             ravenclawScore++
           }
-        });
-        console.log(value);
-        console.log(gryffindorScore);
-        console.log(slytherinScore);
+      });
 
         var team;
 
@@ -559,7 +558,7 @@
         } else {
           team = "ravenclaw"
         };
-
+console.log(team);
         // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
@@ -570,7 +569,9 @@
           photo: $("#photo").val(),
           team: team
         };
-        
+console.log(userData);
+
+
         var results = {
           name: $("#name"),
           gender: $("#gender"),
@@ -603,7 +604,7 @@
         
     
       
-        $.post("/api/sorting-quiz", userData, function (data) {
+        $.post("/api/sorting-quiz", userData, function (results) {
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#name").text(results.name);
@@ -613,7 +614,7 @@
           $("#photo").text(results.photo);
           $("#team").text(results.team);
 
-          
+          console.log(results);
 
           // Show the modal with the best match
           $("#results-modal").modal(results.name);
