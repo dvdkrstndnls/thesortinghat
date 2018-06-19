@@ -12,19 +12,18 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/api/sorting-quiz", function(req, res) {
-    db.User.findAll({  
-      attributes: ['name', 'gender', 'location', 'team'],
-      where: { team: 'hufflepuff' }
-    }).then(function(response){
-      res.json(response.length); //in the future remove length to get ALL of the data out of DB
+    db.User.findAll({
+      attributes: ["name", "gender", "location", "team"],
+      where: { team: "hufflepuff" }
     })
-    .catch(function(err) {
-      // print the error details
-      console.log(err);
-
+      .then(function(response) {
+        res.json(response.length); //in the future remove length to get ALL of the data out of DB
+      })
+      .catch(function(err) {
+        // print the error details
+        console.log(err);
+      });
   });
-});
-
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
@@ -42,17 +41,17 @@ module.exports = function(app) {
 
     // We will use this object to hold the "best match". We will constantly update it as we
     // loop through all of the options
-    
 
     // Here we take the result of the user"s survey POST and parse it.
     var user = req.body;
 
-    db.User.create(user).then(function(results) {
-      res.json(results)
-    }).catch(function(err) {
-      // print the error details
-      console.log(err);
-  });;
-    
+    db.User.create(user)
+      .then(function(results) {
+        res.json(results);
+      })
+      .catch(function(err) {
+        // print the error details
+        console.log(err);
+      });
   });
 };
