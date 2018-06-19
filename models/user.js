@@ -10,36 +10,26 @@ module.exports = function(sequelize, DataTypes) {
     },
     age: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-    }, 
+      allowNull: false
+    },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     location: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     photo: DataTypes.STRING,
     // submission_date: DataTypes.DATE , ///date format validation would be idea, commented out because sequelize's createdat is taking care of this functionality
-    team: DataTypes.STRING,
-
-
+    team: DataTypes.STRING
   });
 
-  // Author.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Author.hasMany(models.Post, {
-  //     onDelete: "cascade"
-  //   });
-  // };
-User.sync();
+  User.sync();
   return User;
-module.exports = User.name;};
-
-
+  module.exports = User.name;
+};

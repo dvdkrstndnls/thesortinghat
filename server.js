@@ -32,12 +32,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// //maybe we don;t use handlebars SINCE ITS NOT REQUIRED and just serve regular html instead? (see author post activity)
-// var exphbs = require("express-handlebars");
-
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
