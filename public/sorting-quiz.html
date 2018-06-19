@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="icon" href="assets/images/vold.png">
 
+
+
+
 </head>
 
 <body>
@@ -28,42 +31,48 @@
 
     <div class="row">
       <div class="col">
-        <h2 href = "/home"> SORTING QUIZ</h2>
+        <a href="https://fontmeme.com/harry-potter-font/">
+          <img src="https://fontmeme.com/permalink/180618/9d7faf16f96ef8775597e1ac5151900b.png" id="top-header" alt="harry-potter-font"
+            border="0">
+        </a>
+        <!-- <h2 href = "/home"> SORTING QUIZ</h2> -->
         <hr>
 
         <div class="container" id="topform">
-          <div class="col-sm-6">
-            <h3>
-              <strong>About You</strong>
-            </h3>
-            <h4>Name (Required)</h4>
-            <input type="text" id="name" class="form-control h-20" required>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <h3>
+                <strong>About You</strong>
+              </h3>
+              <h4>Name (Required)</h4>
+              <input type="text" id="name" class="form-control h-20" required>
 
-            <h4>Age (Required)</h4>
-            <input type="text" id="age" class="form-control" required>
+              <h4>Age (Required)</h4>
+              <input type="text" id="age" class="form-control" required>
 
-            <h4>Gender (Required)</h4>
-            <input type="text" id="gender" class="form-control" required>
+              <h4>Gender (Required)</h4>
+              <input type="text" id="gender" class="form-control" required>
 
-            <h4>Location (Required)</h4>
-            <input type="text" id="location" class="form-control" required>
+              <h4>Location (Required)</h4>
+              <input type="text" id="location" class="form-control" required>
 
-            <h4>Email (Required)</h4>
-            <input type="text" id="email" class="form-control" required>
+              <h4>Email (Required)</h4>
+              <input type="text" id="email" class="form-control" required>
 
-            <h4>Link to Photo Image (Required)</h4>
-            <input type="text" id="photo" class="form-control" required>
-          </div>
+              <h4>Link to Photo Image (Required)</h4>
+              <input type="text" id="photo" class="form-control" required>
+            </div>
 
-          <div class="col-sm-6" id="img">
-            <a href="https://fontmeme.com/harry-potter-font/">
-              <img src="https://fontmeme.com/permalink/180616/80221c2389288a18b00e0c3130a4ad97.png" id="title" alt="harry-potter-font"
-                border="0" width="480px">
-            </a>
-            <img src="./assets/images/allhouses.jpg" width="470px" height="410px">
+            <div class="col-xs-12 col-sm-6" id="img">
+              <a href="https://fontmeme.com/harry-potter-font/">
+                <img src="https://fontmeme.com/permalink/180616/80221c2389288a18b00e0c3130a4ad97.png" id="title" alt="harry-potter-font"
+                  border="0" width="480px">
+              </a>
+              <img src="./assets/images/allhouses.jpg" width="470px" height="410px">
+            </div>
           </div>
         </div>
-      
+
         <!-- extra user info from sherry's paper goes here -->
 
         <div class="container" id="questions">
@@ -128,7 +137,7 @@
                 <option value="g">B. Ask for more stories of your adventure</option>
                 <option value="s">C. Think with admiration of your achievements</option>
                 <option value="h">D. I don’t care what people think of me after I'm dead. Its what they think of me when I'm alive that counts.
-                  </option>
+                </option>
               </select>
 
               <br>
@@ -142,7 +151,7 @@
               <select class="chosen-select w-100" id="q5">
                 <option value=""></option>
                 <option value="s">A. The mysterious black liquid that gleams like ink, and gives off fumes that make you see strange visions
-                  </option>
+                </option>
                 <option value="r">B. The foaming, frothing, silvery, liquid that sparkles, as though containing ground diamonds </option>
                 <option value="g">C. The golden liquid so bright that it hurts the eye, and which makes sunspots dance all around the room.</option>
                 <option value="h">D. The thick, smooth, richly purple drink that gives off a delicious smell of chocolate and plums</option>
@@ -159,7 +168,7 @@
                 irreplaceable items and treasures, including a cure for dragon pox, which the Headmaster has nearly perfected;
                 student records going back 2500 years and a mysterious handwritten book full of strange runes, believed to
                 have belonged to Merlin. In which order would you rescue these objects from the trolls club, if you could?
-                </h4>
+              </h4>
               <select class="chosen-select w-100" id="q6">
                 <option value=""></option>
                 <option value="h">A. Cure, Book, Records</option>
@@ -367,8 +376,8 @@
   </div>
 
   <!-- END OF QUESTION CONTAINER FOR SORTING !!!! -->
-  Modal
-  <div  id="results-modal" class="modal fade" role="dialog">
+  <!-- Modal-->
+  <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -429,7 +438,7 @@
       </div> -->
 
 
-      
+
 
       <div class="modal-content">
         <div class="modal-header">
@@ -439,13 +448,18 @@
           </h2>
         </div>
         <div class="modal-body">
-          <h2 id ="match-name"></h2>
-          <div id ='picDiv'></div>
+          <h2 id="match-name"></h2>
+          <div id='picDiv'></div>
           <BR>
           <a href="https://kayak.com">Book your flight</a>
-          for the next meet up at <i>The Wizarding World of Harry Potter</i> in Orlando, Florida!<br><br>
-          Your House is meeting on Labor Day (Monday, September 3, 2018) 11am at:<br><br>
-          <a href="https://www.universalorlando.com/web/en/us/theme-parks/islands-of-adventure/the-wizarding-world-of-harry-potter-hogsmeade/index.html#dining">Hog's Head</a> (Located in the back of Three Broomsticks™ in Hogsmeade™) - this is the place to stop in for a Butterbeer™ and Pumpkin Juice™
+          for the next meet up at
+          <i>The Wizarding World of Harry Potter</i> in Orlando, Florida!
+          <br>
+          <br> Your House is meeting on Labor Day (Monday, September 3, 2018) 11am at:
+          <br>
+          <br>
+          <a href="https://www.universalorlando.com/web/en/us/theme-parks/islands-of-adventure/the-wizarding-world-of-harry-potter-hogsmeade/index.html#dining">Hog's Head</a> (Located in the back of Three Broomsticks™ in Hogsmeade™) - this is the place to stop in for a Butterbeer™
+          and Pumpkin Juice™
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
@@ -483,26 +497,29 @@
     $("#sort").on("click", function (event) {
       event.preventDefault();
 
-      // Form validation
-      // function validateForm() {
-      //   var isValid = true;
-      //   $(".form-control").each(function () {
-      //     if ($(this).val() === "") {
-      //       isValid = false;
-      //     }
-      //   });
+      // Form validation // THIS IS THE ERROR MESSAGE ALERT!!!! // 
+      //var isValid;
+      var validateForm = function () {
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
 
-      //   $(".chosen-select").each(function () {
+        $(".chosen-select").each(function () {
 
-      //     if ($(this).val() === "") {
-      //       isValid = false;
-      //     }
-      //   });
-      //   return isValid;
-      // }
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+      //validateForm(); // END HERE!! WE NEED THIS!!!! //
 
       // If all required fields are filled
-      if (true) {
+      console.log("validation is", validateForm())
+      if (validateForm()) {
 
         var answers = [
           $("#q1").val(),
@@ -523,7 +540,7 @@
           $("#q16").val(),
           $("#q17").val(),
         ]
-console.log(answers);
+        console.log(answers);
 
         var gryffindorScore = 0;
         var slytherinScore = 0;
@@ -541,7 +558,7 @@ console.log(answers);
           } else if (value === "r") {
             ravenclawScore++
           }
-      });
+        });
 
         var team;
 
@@ -551,7 +568,7 @@ console.log(answers);
           team = "gryffindor";
           var img = $("<img>");
           img.attr('alt', 'no pic found');
-          img.attr('src','./assets/images/gryff.jpg');
+          img.attr('src', './assets/images/gryff.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
 
@@ -562,7 +579,7 @@ console.log(answers);
           team = "slytherin";
           var img = $("<img>");
           img.attr('alt', 'no pic found');
-          img.attr('src','./assets/images/sly.jpg');
+          img.attr('src', './assets/images/sly.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
 
@@ -572,7 +589,7 @@ console.log(answers);
           team = "hufflepuff";
           var img = $("<img>");
           img.attr('alt', 'no pic found');
-          img.attr('src','./assets/images/huff.jpg');
+          img.attr('src', './assets/images/huff.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
 
@@ -580,11 +597,11 @@ console.log(answers);
           team = "ravenclaw"
           var img = $("<img>");
           img.attr('alt', 'no pic found');
-          img.attr('src','./assets/images/raven.jpg');
+          img.attr('src', './assets/images/raven.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
         };
-console.log(team);
+        console.log(team);
         // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
@@ -595,7 +612,7 @@ console.log(team);
           photo: $("#photo").val(),
           team: team
         };
-console.log(userData);
+        console.log(userData);
 
 
         var results = {
@@ -627,9 +644,9 @@ console.log(userData);
         //we will replace the remaining logic with something that connects to Sequelize DB
 
         // AJAX post the data to the friends API.
-        
-    
-      
+
+
+
         $.post("/api/sorting-quiz", userData, function (results) {
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
@@ -643,19 +660,23 @@ console.log(userData);
           console.log(results);
 
           // Show the modal with the best match
-          $("#results-modal").modal(results.name);
+          //$("#results-modal").modal(results.name);
 
         });
       } else {
         alert("Please fill out all fields before submitting!");
+
+
       }
+        //psudeo coding to play theme song .. // 
+      //var myAudio = new Audio("assets/HP_Theme.mp3");
+      //myAudio.play();
+
     });
   </script>
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
 
 </body>
 

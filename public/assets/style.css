@@ -1,6 +1,5 @@
 body {
- 
-  background-color: red;
+  background-image: url("https://i1.wp.com/wallur.com/wp-content/uploads/2016/12/potter-background-13.jpg?resize=1600%2C900"); 
 }
 
 
@@ -9,29 +8,31 @@ body {
   float: right;
 } */
 
-.jumbotron{
+.jumbotron {
   background-color: peachpuff;
 }
-
 
 #topform {
   display: flex;
 }
 
-#title{
+#title {
   padding-bottom: 30px;
 }
 
-#questions{
+#questions {
   width: auto;
 }
 
-
-
-
-
+#top-header {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 
 /* MEDIA QUERIES */
+
 @media (min-width: 1200px) {
   .container {
     width: 990px;
@@ -77,3 +78,12 @@ body {
 h1 {
   color: #f30;
 }
+
+/* cursor!!!! */
+/* Start http://www.cursors-4u.com */
+
+* {
+  cursor: url(http://cur.cursors-4u.net/others/oth-3/oth269.cur), auto !important;
+}
+
+/* End http://www.cursors-4u.com */
