@@ -1,6 +1,11 @@
 # thesortinghat
 Sort online users into Houses (ie Gryffindor, Slytherin, Hufflepuff, RavenClaw) for the purposes of meeting at Universal Studios on a certain date to visit Harry Potter themepark as part of Harry Potter Community of Strangers (who are now new friends!)
 
+## Team
+David Daniels - https://github.com/dvdkrstndnls
+Sherry Yang - https://github.com/xxsherryyy
+Krista Neel - https://github.com/kneel25
+
 
 ## Install
 gitignore is set up to ignore node modules thus, after cloning do the following:
