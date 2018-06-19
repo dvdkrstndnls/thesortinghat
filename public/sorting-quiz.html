@@ -596,7 +596,7 @@
           $('#picDiv').empty();
           $('#picDiv').append(img)
           // $('#match-name').text(team);
-          $('#match-name').text('#name');
+          $('#match-name').text(userData.name);
 
         } else if (hufflepuffScore > gryffindorScore &&
           hufflepuffScore > ravenclawScore &&
@@ -608,7 +608,7 @@
           $('#picDiv').empty();
           $('#picDiv').append(img)
           // $('#match-name').text(team);
-          $('#match-name').text('#name');
+          $('#match-name').text(userData.name);
 
         } else {
           team = "Ravenclaw"
@@ -618,7 +618,7 @@
           $('#picDiv').empty();
           $('#picDiv').append(img)
           // $('#match-name').text(team);
-          $('#match-name').text('#name');
+          $('#match-name').text(userData.name);
         };
         console.log(team);
         // Create an object for the user"s data
