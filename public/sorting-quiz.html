@@ -448,7 +448,7 @@
           </h2>
         </div>
         <div class="modal-body">
-          <h2 id="match-name"></h2>
+          <h2 id="match-name"><h4>The Sorting Hat placed you in</h4></h2>
           <div id='picDiv'></div>
           <BR>
           <a href="https://kayak.com">Book your flight</a>
@@ -498,7 +498,7 @@
       event.preventDefault();
 
       // Form validation // THIS IS THE ERROR MESSAGE ALERT!!!! // 
-      //var isValid;
+      var isValid;
       var validateForm = function () {
         var isValid = true;
         $(".form-control").each(function () {
@@ -518,7 +518,7 @@
       //validateForm(); // END HERE!! WE NEED THIS!!!! //
 
       // If all required fields are filled
-      console.log("validation is", validateForm())
+      // console.log("validation is", validateForm())
       if (validateForm()) {
 
         var answers = [
@@ -542,6 +542,15 @@
         ]
         console.log(answers);
 
+        var userData = {
+          name: $("#name").val(),
+          age: $("#age").val(),
+          gender: $("#gender").val(),
+          location: $("#location").val(),
+          email: $("#email").val(),
+          photo: $("#photo").val(),
+        };
+
         var gryffindorScore = 0;
         var slytherinScore = 0;
         var hufflepuffScore = 0;
@@ -563,43 +572,51 @@
         var team;
 
         if (gryffindorScore > slytherinScore &&
-          grffindorScore > hufflepuffScore &&
+          gryffindorScore > hufflepuffScore &&
           gryffindorScore > ravenclawScore) {
-          team = "gryffindor";
+          team = "Gryffindor";
           var img = $("<img>");
           img.attr('alt', 'no pic found');
           img.attr('src', './assets/images/gryff.jpg');
           $('#picDiv').empty();
-          $('#picDiv').append(img)
+          $('#picDiv').append(img);
+          // $('#match-name').text(team);
+          $('#match-name').text(userData.name);
 
 
         } else if (slytherinScore > gryffindorScore &&
           slytherinScore > hufflepuffScore &&
           slytherinScore > ravenclawScore) {
-          team = "slytherin";
+          team = "Slytherin";
           var img = $("<img>");
           img.attr('alt', 'no pic found');
           img.attr('src', './assets/images/sly.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
+          // $('#match-name').text(team);
+          $('#match-name').text('#name');
 
         } else if (hufflepuffScore > gryffindorScore &&
           hufflepuffScore > ravenclawScore &&
           hufflepuffScore > slytherinScore) {
-          team = "hufflepuff";
+          team = "Hufflepuff";
           var img = $("<img>");
           img.attr('alt', 'no pic found');
           img.attr('src', './assets/images/huff.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
+          // $('#match-name').text(team);
+          $('#match-name').text('#name');
 
         } else {
-          team = "ravenclaw"
+          team = "Ravenclaw"
           var img = $("<img>");
           img.attr('alt', 'no pic found');
           img.attr('src', './assets/images/raven.jpg');
           $('#picDiv').empty();
           $('#picDiv').append(img)
+          // $('#match-name').text(team);
+          $('#match-name').text('#name');
         };
         console.log(team);
         // Create an object for the user"s data
@@ -668,7 +685,7 @@
 
 
       }
-        //psudeo coding to play theme song .. // 
+      //psudeo coding to play theme song .. // 
       //var myAudio = new Audio("assets/HP_Theme.mp3");
       //myAudio.play();
 
