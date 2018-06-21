@@ -357,7 +357,7 @@
             <br>
 
             <!-- Submit Button -->
-            <button data-toggle="modal" data-target="#results-modal" type="submit" class="btn btn-primary btn-lg btn-block" id="sort">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="sort">
               <i class="fa fa-check-circle" aria-hidden="true">
                 <h2>Sort Me into my House!</h2>
               </i>
@@ -683,11 +683,12 @@
           console.log(results);
 
           // Show the modal with the best match
-          //$("#results-modal").modal(results.name);
+          $("#results-modal").modal();
 
         });
       } else {
         alert("Please fill out all fields before submitting!");
+        return;
 
 
       }

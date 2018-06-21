@@ -11,19 +11,36 @@ module.exports = function(app) {
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
 
-  app.get("/api/sorting-quiz", function(req, res) {
+  // app.get("/api/sorting-quiz", function(req, res) {
+  //   db.User.findAll({
+  //     attributes: ["name", "gender", "location", "team"],
+  //     where: { team: "hufflepuff" }
+  //   })
+  //     .then(function(response) {
+  //       res.json(response.length); //in the future remove length to get ALL of the data out of DB
+  //     })
+  //     .catch(function(err) {
+  //       // print the error details
+  //       console.log(err);
+  //     });
+  // });
+
+  app.get("/api/home", function(req, res) {
     db.User.findAll({
-      attributes: ["name", "gender", "location", "team"],
-      where: { team: "hufflepuff" }
+      attributes: ["name", "gender", "location", "team", "createdAt"],
+      limit: 5, 
+      order: [['createdAt', 'DESC']]
     })
       .then(function(response) {
-        res.json(response.length); //in the future remove length to get ALL of the data out of DB
+        res.json(response); //in the future remove length to get ALL of the data out of DB
+      
       })
       .catch(function(err) {
         // print the error details
         console.log(err);
       });
   });
+
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
