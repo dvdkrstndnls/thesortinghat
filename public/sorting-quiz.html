@@ -34,7 +34,7 @@
 
     <div class="row">
       <div class="col">
-        <a href="../public/home.html">
+        <a href="../home.html">
           <img src="https://fontmeme.com/permalink/180618/9d7faf16f96ef8775597e1ac5151900b.png" id="top-header" alt="harry-potter-font"
             border="0">
         </a>
@@ -446,7 +446,7 @@
 
       <div class="modal-content">
         <div class="modal-header">
-          <button class="close" data-dismiss="modal">&times;</button>
+          <a href="../home.html"><button class="close" data-dismiss="modal">&times;</button></a>
           <h2 class="modal-title">
             <strong>Here's Your House!</strong>
           </h2>
@@ -469,6 +469,7 @@
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Close</button>
+          <a href="../home.html" onclick="$('.btn btn-default')"></a>
         </div>
       </div>
 
@@ -684,7 +685,7 @@
 
           // Show the modal with the best match
           $("#results-modal").modal();
-
+          
         });
       } else {
         alert("Please fill out all fields before submitting!");
