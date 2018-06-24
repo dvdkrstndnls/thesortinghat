@@ -11,19 +11,19 @@ module.exports = function(app) {
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
 
-  // app.get("/api/sorting-quiz", function(req, res) {
-  //   db.User.findAll({
-  //     attributes: ["name", "gender", "location", "team"],
-  //     where: { team: "hufflepuff" }
-  //   })
-  //     .then(function(response) {
-  //       res.json(response.length); //in the future remove length to get ALL of the data out of DB
-  //     })
-  //     .catch(function(err) {
-  //       // print the error details
-  //       console.log(err);
-  //     });
-  // });
+  app.get("/api/sorting-quiz", function(req, res) {
+    db.User.findAll({
+      attributes: ["name", "gender", "location", "team"],
+      where: { team: "hufflepuff" }
+    })
+      .then(function(response) {
+        res.json(response.length); //in the future remove length to get ALL of the data out of DB
+      })
+      .catch(function(err) {
+        // print the error details
+        console.log(err);
+      });
+  });
 
   app.get("/api/home", function(req, res) {
     db.User.findAll({

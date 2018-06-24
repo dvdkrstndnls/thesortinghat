@@ -41,6 +41,22 @@
 
     </div>
 
+    <div class="jumbotron">
+        <h2>Recently Sorted</h2>
+        <div class = "panel-body">
+          
+          <div class="card-body" id="list">
+					
+              <!-- Top 5 recent posts content will go in here -->
+  
+          </div>
+  
+        </div>
+    <br>
+
+    </div>
+
+
     <footer class="footer">
       <div class="container">
         <p>
@@ -55,4 +71,22 @@
 
 </body>
 
+
+
+</body>
+
 </html>
+
+<script>
+
+//Top 5 recent posts//
+
+          $.get("api/home", function (data) {
+            console.log(data);
+            for (var i=0; i<data.length; i++) {
+              var list = $('#match-name').text(data.name)
+               $('#list').append("<h3>" + (i + 1) + ". " + data[i].name + " - " + data[i].team, "</h3>", "<h4>" +  data[i].createdAt + "</h4>");
+            }
+          });
+          
+</script>
